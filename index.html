@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Encuesta de Salud</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Encuesta de Salud</h1>
+
+<form id="healthSurveyForm">
+
+  <fieldset>
+    <legend>Información Personal</legend>
+
+    <label for="nombre">Nombre Completo:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="edad">Edad:</label><br>
+    <input type="number" id="edad" name="edad" min="0" max="120" required><br><br>
+
+    <label for="peso">Peso (kg):</label><br>
+    <input type="number" id="peso" name="peso" min="1" max="500" step="0.1" required><br><br>
+
+    <label for="altura">Altura (cm):</label><br>
+    <input type="number" id="altura" name="altura" min="1" max="250" step="0.1" required><br><br>
+  </fieldset>
+
+  <fieldset>
+    <legend>Información Médica</legend>
+
+    <label for="tipo-sangre">Tipo de Sangre:</label><br>
+    <select id="tipo-sangre" name="tipo-sangre" required>
+      <option value="">-- Seleccione una opción --</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+    </select><br><br>
+
+    <label for="nivel-dolor">Nivel de Dolor (0=Ninguno, 10=Máximo):</label><br>
+    <input type="range" id="nivel-dolor" name="nivel-dolor" min="0" max="10" value="0"><br><br>
+
+    <label for="alergias">¿Tiene alguna alergia conocida? (Sí/No):</label><br>
+    <input type="radio" id="alergias-si" name="alergias" value="si">
+    <label for="alergias-si">Sí</label><br>
+    <input type="radio" id="alergias-no" name="alergias" value="no" checked>
+    <label for="alergias-no">No</label><br><br>
+
+    <label for="detalles-alergias">Si respondió "Sí" a alergias, por favor detalle:</label><br>
+    <textarea id="detalles-alergias" name="detalles-alergias" rows="4" cols="50"></textarea><br><br>
+
+    <label for="medicacion">¿Está tomando alguna medicación actualmente? (Sí/No):</label><br>
+    <input type="radio" id="medicacion-si" name="medicacion" value="si">
+    <label for="medicacion-si">Sí</label><br>
+    <input type="radio" id="medicacion-no" name="medicacion" value="no" checked>
+    <label for="medicacion-no">No</label><br><br>
+
+    <label for="detalles-medicacion">Si respondió "Sí" a medicación, por favor detalle:</label><br>
+    <textarea id="detalles-medicacion" name="detalles-medicacion" rows="4" cols="50"></textarea><br><br>
+  </fieldset>
+
+  <button type="submit">Enviar Encuesta</button>
+
+</form>
+
+<script src="script.js"></script>
+</body>
+</html>
